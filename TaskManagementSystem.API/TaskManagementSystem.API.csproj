@@ -15,7 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TaskManagementSystem.Persistence\TaskManagementSystem.Persistence.csproj" />
-    <ProjectReference Include="..\TaskManagementSystem.Application\TaskManagementSystem.Application.csproj" />
     <ProjectReference Include="..\TaskManagementSystem.Domain\TaskManagementSystem.Domain.csproj" />
+    <ProjectReference Include="..\TaskManagementSystem.Application\TaskManagementSystem.Application.csproj" />
   </ItemGroup>
 </Project>
