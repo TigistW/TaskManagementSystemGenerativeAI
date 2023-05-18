@@ -1,4 +1,5 @@
 using AutoMapper;
+using TaskManagementSystem.Application.Features.CheckList.DTO;
 using TaskManagementSystem.Application.Features.UserChore.DTO;
 using TaskManagementSystem.Domain;
 
@@ -13,6 +14,11 @@ public class Mappings : Profile
         CreateMap<ChoreDetailDto, Chore>().ReverseMap();
         CreateMap<DeleteChoreDto, Chore>().ReverseMap();
         CreateMap<UpdateChoreDto, Chore>().ReverseMap();
+
+        CreateMap<CreateCheckListDto, CheckList>().ReverseMap();
+        CreateMap<GetCheckListDto, CheckList>().ReverseMap();
+        CreateMap<DeleteCheckListDto, CheckList>().ReverseMap();
+        CreateMap<UpdateCheckListDto, CheckList>().ReverseMap();
 
     }
 }

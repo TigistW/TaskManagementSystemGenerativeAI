@@ -6,6 +6,7 @@ public class UnitOfWork :IUnitOfWorks
 {
     private readonly TaskManagementSystemDbContext _context;
     private IChoreRepository _choreRepository;
+    private ICheckListRepository _checkListRepository;
     public UnitOfWork(TaskManagementSystemDbContext context)
     {
         _context = context;
@@ -19,6 +20,16 @@ public class UnitOfWork :IUnitOfWorks
             return _choreRepository;
         }
 
+    }
+
+    public ICheckListRepository CheckListRepository {
+        get
+        {
+            if (_checkListRepository == null){
+                _checkListRepository = new CheckListRepository(_context);
+            }
+            return _checkListRepository;
+        }
     }
 
     public void Dispose()

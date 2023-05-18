@@ -9,7 +9,7 @@ namespace TaskManagementSystem.Application.Features.UserChore.CQRS.Handlers;
 
 public class DeleteChoreCommandHandler: IRequestHandler<DeleteChoreCommand, BaseCommandResponse<Unit>>
 {
-    private readonly IUnitOfWorks _unitOfWork;
+private readonly IUnitOfWorks _unitOfWork;
 private readonly IMapper _mapper;
 
 public DeleteChoreCommandHandler(IUnitOfWorks unitOfWorks, IMapper mapper)
