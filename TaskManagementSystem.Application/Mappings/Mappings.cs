@@ -11,7 +11,8 @@ public class Mappings : Profile
         CreateMap<CreateChoreDto, Chore>().ReverseMap();
         CreateMap<ChoreListDto, Chore>().ReverseMap();
         CreateMap<ChoreDetailDto, Chore>().ReverseMap();
-        CreateMap<CreateChoreDto, Chore>().ReverseMap();
+        CreateMap<DeleteChoreDto, Chore>().ReverseMap();
+        CreateMap<UpdateChoreDto, Chore>().ReverseMap();
 
     }
 }

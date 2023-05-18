@@ -22,7 +22,7 @@ public class CreateChoreCommandHandler : IRequestHandler<CreateChoreCommand, Bas
     {
         var chore = _mapper.Map<Chore>(request.createChoreDto);
         chore = await _unitOfWork.ChoreRepository.Add(chore);
-
+        await _unitOfWork.Save();
         var result = new BaseCommandResponse<CreateChoreDto>();
         result.Value = _mapper.Map<CreateChoreDto>(chore);
         result.Message = "Fetch Successful";

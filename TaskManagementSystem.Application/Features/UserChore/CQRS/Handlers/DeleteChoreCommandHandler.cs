@@ -22,6 +22,7 @@ public async Task<BaseCommandResponse<Unit>>Handle(DeleteChoreCommand request, C
 {
     var chore = _mapper.Map<Chore>(request.deleteChoreDto);
     await _unitOfWork.ChoreRepository.Delete(chore);
+        await _unitOfWork.Save();
     return new BaseCommandResponse<Unit>();
 }
 }

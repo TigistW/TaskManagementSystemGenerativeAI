@@ -22,7 +22,7 @@ public class UpdateChoreCommandHandler : IRequestHandler<UpdateChoreCommand, Bas
     {
         var chore = _mapper.Map<Chore>(request.updateChoreDto);
         await _unitOfWork.ChoreRepository.Update(chore);
-
+        await _unitOfWork.Save();
         var result = new BaseCommandResponse<UpdateChoreDto>();
         result.Value = _mapper.Map<UpdateChoreDto>(chore);
         result.Message = "Update Successful";

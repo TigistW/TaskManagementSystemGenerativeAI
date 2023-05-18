@@ -28,5 +28,4 @@ public class TaskManagementSystemDbContext : DbContext
             return base.SaveChangesAsync(cancellationToken);
         }
 
-
     }
