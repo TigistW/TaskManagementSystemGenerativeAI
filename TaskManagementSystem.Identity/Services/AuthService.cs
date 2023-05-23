@@ -53,7 +53,7 @@ public class AuthService : IAuthService
             return result;
         }
 
-        var res = await _signInManager.PasswordSignInAsync(user.UserName, request.Password, false, lockoutOnFailure: false);
+        var res = await _signInManager.PasswordSignInAsync(user.Email, request.Password, false, lockoutOnFailure: false);
         if (!res.Succeeded)
         {
             result.Success = false;

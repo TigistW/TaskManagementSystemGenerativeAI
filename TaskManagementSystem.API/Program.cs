@@ -26,7 +26,7 @@ builder.Services.AddCors(o =>
         .AllowAnyHeader());
 });
 
-
+AddSwaggerDoc(builder.Services);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
